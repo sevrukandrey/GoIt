@@ -30,7 +30,7 @@ public class Task1 {
         return sum;
     }
 
-    public static double sum(double [] array) {
+    public static double sum(double[] array) {
         double sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
