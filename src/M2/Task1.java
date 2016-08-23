@@ -13,11 +13,12 @@ public class Task1 {
         System.out.println(min(array2));
         System.out.println(max(array));
         System.out.println(max(array2));
+        System.out.println(maxPositive(array));
         System.out.println(multiplication(array));
         System.out.println(multiplication(array2));
         System.out.println(secondLargest(array));
         System.out.println(secondLargest(array2));
-        System.out.println(maxPositive(array));
+
 
     }
 
