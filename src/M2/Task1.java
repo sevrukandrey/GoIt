@@ -17,6 +17,7 @@ public class Task1 {
         System.out.println(multiplication(array2));
         System.out.println(secondLargest(array));
         System.out.println(secondLargest(array2));
+        System.out.println(maxPositive(array));
 
     }
 
@@ -76,14 +77,20 @@ public class Task1 {
         return max;
     }
 
-    /*public static int maxPositive(int array[]) {
+    public static void maxPositive(int array[]) {
 
-        for (int i = 0; i < array.length; i++) {
-
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
         }
-        return;
+     if (max < 0)
+         System.out.println("???? ??????");
+        System.out.println(max);
+
     }
-    */
+
 
     public static int multiplication(int array[]) {
         int sum = 1;
