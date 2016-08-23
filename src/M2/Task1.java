@@ -77,7 +77,7 @@ public class Task1 {
         return max;
     }
 
-    public static void maxPositive(int array[]) {
+    public static int maxPositive(int array[]) {
 
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -85,9 +85,9 @@ public class Task1 {
                 max = array[i];
             }
         }
-     if (max < 0)
-         System.out.println("???? ??????");
-        System.out.println(max);
+        if (max < 0)
+            return 0;
+        return max;
 
     }
 
