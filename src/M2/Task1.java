@@ -5,8 +5,8 @@ package M2;
  */
 public class Task1 {
     public static void main(String[] args) {
-        int array[] = {1, -1, -100, 99, 98, 1, 1, 1, 1, 1};
-        double array2[] = {1.1, -1.1, 1.1, 1.1, 1.1, 11.1, 10.1, 1.1, 1.1, 1.1};
+        int[] array = {1, -1, -100, 99, 98, 1, 1, 1, 1, 1};
+        double[] array2 = {1.1, -1.1, 1.1, 1.1, 1.1, 11.1, 10.1, 1.1, 1.1, 1.1};
         System.out.println(sum(array));
         System.out.println(sum(array2));
         System.out.println(min(array));
@@ -22,7 +22,7 @@ public class Task1 {
 
     }
 
-    public static int sum(int array[]) {
+    public static int sum(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
@@ -30,7 +30,7 @@ public class Task1 {
         return sum;
     }
 
-    public static double sum(double array[]) {
+    public static double sum(double [] array) {
         double sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
@@ -38,7 +38,7 @@ public class Task1 {
         return sum;
     }
 
-    public static int min(int array[]) {
+    public static int min(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
             if (min > array[i]) {
@@ -48,7 +48,7 @@ public class Task1 {
         return min;
     }
 
-    public static double min(double array[]) {
+    public static double min(double[] array) {
         double min = array[0];
         for (int i = 1; i < array.length; i++) {
             if (min > array[i]) {
@@ -58,7 +58,7 @@ public class Task1 {
         return min;
     }
 
-    public static int max(int array[]) {
+    public static int max(int[] array) {
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
             if (max < array[i]) {
@@ -68,7 +68,7 @@ public class Task1 {
         return max;
     }
 
-    public static double max(double array[]) {
+    public static double max(double[] array) {
         double max = array[0];
         for (int i = 1; i < array.length; i++) {
             if (max < array[i]) {
@@ -78,7 +78,7 @@ public class Task1 {
         return max;
     }
 
-    public static int maxPositive(int array[]) {
+    public static int maxPositive(int[] array) {
 
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -93,7 +93,7 @@ public class Task1 {
     }
 
 
-    public static int multiplication(int array[]) {
+    public static int multiplication(int[] array) {
         int sum = 1;
         for (int i = 0; i < array.length; i++) {
             sum *= array[i];
@@ -101,7 +101,7 @@ public class Task1 {
         return sum;
     }
 
-    public static double multiplication(double array[]) {
+    public static double multiplication(double[] array) {
         double sum = 1;
         for (int i = 0; i < array.length; i++) {
             sum *= array[i];
@@ -109,7 +109,7 @@ public class Task1 {
         return sum;
     }
 
-    public static int secondLargest(int array[]) {
+    public static int secondLargest(int[] array) {
         int max = array[0];
         int secondLargest = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -126,7 +126,7 @@ public class Task1 {
         return secondLargest;
     }
 
-    public static double secondLargest(double array[]) {
+    public static double secondLargest(double[] array) {
         double max = array[0];
         double secondLargest = array[0];
         for (int i = 1; i < array.length; i++) {
