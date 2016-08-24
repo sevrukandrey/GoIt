@@ -2,8 +2,9 @@ package M2;
 
 
 public class Task2 {
+
     public static void main(String[] args) {
-        withdrawMoney(100, 99);
+        withdrawMoney(200, 99);
 
     }
 
