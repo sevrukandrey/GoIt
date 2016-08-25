@@ -5,7 +5,7 @@ package M2;
  */
 public class Task1 {
     public static void main(String[] args) {
-        //int[] array = {10, -1, -100, -99, -98, 1, 1, 1, 1, 3};
+        int[] array = {10, -1, -100, -99, -98, 1, 1, 1, 1, 3};
         double[] array2 = {10.0, -1.1, 1.1, 1.1, 1.1, 11.1, 10.1, 1.1, 1.1, 3.0};
 
         System.out.println(sum(array));
