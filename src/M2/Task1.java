@@ -8,20 +8,7 @@ public class Task1 {
         int[] array = {10, -1, -100, -99, -98, 1, 1, 1, 1, 3};
         double[] array2 = {10.0, -1.1, 1.1, 1.1, 1.1, 11.1, 10.1, 1.1, 1.1, 3.0};
 
-        System.out.println(sum(array));
-        System.out.println(sum(array2));
-        System.out.println(min(array));
-        System.out.println(min(array2));
-        System.out.println(max(array));
-        System.out.println(max(array2));
-        System.out.println(maxPositive(array));
-        System.out.println(maxPositive(array2));
-        System.out.println(multiplication(array));
-        System.out.println(multiplication(array2));
-        System.out.println(secondLargest(array));
-        System.out.println(secondLargest(array2));
-        System.out.println(moddulus(array2));
-        System.out.println(modulus(array));
+
 
 
     }
