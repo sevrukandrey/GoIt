@@ -5,7 +5,7 @@ package M2;
  */
 public class Task1 {
     public static void main(String[] args) {
-        int[] array = {10, -1, -100, -99, -98,1, 1, 1, 1, 3};
+        int[] array = {10, -1, -100, -99, -98, 1, 1, 1, 1, 3};
         double[] array2 = {10.0, -1.1, 1.1, 1.1, 1.1, 11.1, 10.1, 1.1, 1.1, 3.0};
 
         System.out.println(sum(array));
@@ -27,11 +27,11 @@ public class Task1 {
     }
 
     public static double moddulus(double[] array) {
-        return array[0]%array[array.length-1];
+        return array[0] % array[array.length - 1];
     }
 
     public static double modulus(int[] array) {
-        return array[0]%array[array.length-1];
+        return array[0] % array[array.length - 1];
     }
 
     public static int sum(int[] array) {
@@ -134,39 +134,34 @@ public class Task1 {
     }
 
     public static int secondLargest(int[] array) {
-        int max = array[0];
-        int max2 = array[0];
-
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i]>max){
-                max2=max;
-                max=array[i];
-            } else
-            if (max2<array[i]){
-                max2=array[i];
+        for (int i = array.length - 1; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] < array[j + 1]) {
+                    int t = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = t;
+                }
             }
         }
-        return  max2;
-    }
 
+
+        return array[1];
+    }
 
 
     public static double secondLargest(double[] array) {
-        double max = array[0];
-        double secondLargest = array[1];
-        for (int i = 1; i < array.length; i++) {
-            if (max < array[i]) {
-                max = array[i];
+        for (int i = array.length - 1; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] < array[j + 1]) {
+                    double t = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = t;
+                }
             }
         }
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < max && array[i] > secondLargest) {
-                secondLargest = array[i];
-            }
 
-        }
-        return secondLargest;
+
+        return array[1];
+
     }
-
 }
