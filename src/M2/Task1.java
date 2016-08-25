@@ -139,16 +139,16 @@ public class Task1 {
 
 
         for (int i = 0; i < array.length; i++) {
-           if (array[i]>max){
-           max2=max;
-           max=array[i];
-           } else
-               if (max2<array[i]){
+            if (array[i]>max){
+                max2=max;
+                max=array[i];
+            } else
+            if (max2<array[i]){
                 max2=array[i];
-               }
+            }
         }
-return  max2;
-        }
+        return  max2;
+    }
 
 
 
