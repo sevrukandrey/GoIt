@@ -7,6 +7,20 @@ public class Task1 {
     public static void main(String[] args) {
         int[] array = {10, -1, -100, -99, -98, 1, 1, 1, 1, 3};
         double[] array2 = {10.0, -1.1, 1.1, 1.1, 1.1, 11.1, 10.1, 1.1, 1.1, 3.0};
+        System.out.println("Sumof int "+sum(array));
+        System.out.println("Sun of double "+sum(array2));
+        System.out.println("Min int "+min(array));
+        System.out.println("Min double "+min(array2));
+        System.out.println("Max int "+max(array));
+        System.out.println("Max double "+max(array2));
+        System.out.println("Max positive of int "+maxPositive(array));
+        System.out.println("Max positive of "+maxPositive(array2));
+        System.out.println("Multiplication of int "+multiplication(array));
+        System.out.println("Multiplication of "+multiplication(array2));
+        System.out.println("Second largest of int "+secondLargest(array));
+        System.out.println("Second largest of double "+secondLargest(array2));
+        System.out.println("Modulus of int "+moddulus(array2));
+        System.out.println("Modulus of double "+modulus(array));
 
 
 
