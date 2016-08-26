@@ -79,6 +79,7 @@ public class Task1 {
             }
         }
         return max;
+
     }
 
     public static double max(double[] array) {
