@@ -1,6 +1,6 @@
 package M3.Task3;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by asevruk on 8/31/2016.
