@@ -1,4 +1,4 @@
-package M4.Task1;
+package M4.Task2;
 
 /**
  * Created by asevruk on 9/5/2016.
@@ -89,7 +89,7 @@ public abstract class Bank {
     abstract int getCommission();
 
     double moneyPaidMonthlyForSalary(){
-     return getAvgSalaryOfEmployee()*getNumberOfEmployees();
+        return getAvgSalaryOfEmployee()*getNumberOfEmployees();
     }
 
 
