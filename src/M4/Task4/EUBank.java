@@ -1,7 +1,7 @@
 package M4.Task4;
 
-import static M4.Task3.Currency.EUR;
-import static M4.Task3.Currency.USD;
+import static M4.Task4.Currency.EUR;
+import static M4.Task4.Currency.USD;
 
 /**
  * Created by asevruk on 9/5/2016.
