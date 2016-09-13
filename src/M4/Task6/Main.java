@@ -16,5 +16,34 @@ public class Main
 
         User u5= new User(5,"Oran",4000,5,"DataArt",1000,new ChinaBank(1,"Croatia", EUR,10,1200,1,100000));
         User u6= new User(6,"John",5000,6,"Funtime",1000,new ChinaBank(1,"Belarus", USD,10,1200,1,100000));
+
+
+        BankSystemImpl bankSystem = new BankSystemImpl();
+
+        bankSystem.fundUser(u1,500);
+        bankSystem.paySalary(u1);
+        bankSystem.transferMoney(u1, u2, 100);
+        bankSystem.withdrawOfUser(u1, 100);
+        System.out.println(u1.getBalance() + " " + u1.getMonthsOfEmployment() + " " + u1.getSalary() + " " + u1.getName() + " " + u1.getBank()+ " "+u1.getId());
+
+
+        bankSystem.fundUser(u2,500);
+        bankSystem.paySalary(u2);
+        bankSystem.transferMoney(u2, u1, 100);
+        bankSystem.withdrawOfUser(u2, 100);
+        System.out.println(u2.getBalance() + " " + u2.getMonthsOfEmployment() + " " + u2.getSalary() + " " + u2.getName() + " " + u2.getBank()+ " "+u2.getId());
+
+        bankSystem.fundUser(u3,500);
+        bankSystem.paySalary(u3);
+        bankSystem.transferMoney(u3, u1, 100);
+        bankSystem.withdrawOfUser(u3, 100);
+        System.out.println(u3.getBalance() + " " + u3.getMonthsOfEmployment() + " " + u3.getSalary() + " " + u3.getName() + " " + u3.getBank()+ " "+u3.getId());
+
+        bankSystem.fundUser(u4,500);
+        bankSystem.paySalary(u4);
+        bankSystem.transferMoney(u4, u1, 100);
+        bankSystem.withdrawOfUser(u4, 100);
+        System.out.println(u4.getBalance() + " " + u4.getMonthsOfEmployment() + " " + u4.getSalary() + " " + u4.getName() + " " + u4.getBank()+ " "+u4.getId());
+
     }
 }
