@@ -1,5 +1,7 @@
 package M5.Task7;
 
+
+
 /**
  * Created by asevruk on 9/13/2016.
  */
@@ -35,6 +37,11 @@ public class Controller {
 
         for (int i = 0; i < res.length; i++) {
             System.out.println(res[i]);
+        }
+        DAOimpl dao = new DAOimpl();
+        for (int i = 0; i <res.length ; i++) {
+            dao.save(res[i]);
+
         }
         return res;
     }

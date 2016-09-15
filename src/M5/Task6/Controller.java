@@ -36,6 +36,12 @@ public class Controller {
         for (int i = 0; i < res.length; i++) {
             System.out.println(res[i]);
         }
+        DAOimpl dao = new DAOimpl();
+        for (int i = 0; i <res.length ; i++) {
+            dao.save(res[i]);
+
+        }
+
         return res;
     }
 

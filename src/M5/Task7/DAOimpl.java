@@ -9,7 +9,7 @@ public class DAOimpl implements DAO {
 
     @Override
     public Room save(Room room) {
-        System.out.println(room + "saved");
+        System.out.println(room + " WAS SAVED");
         return room;
     }
 
