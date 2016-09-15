@@ -20,18 +20,12 @@ public class GoogleAPI implements API {
     }
 
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        Room[] mas = new Room[10];
-        for (int i = 0; i < rooms.length; i++) {
-            if (price == rooms[i].getPrice() && persons == rooms[i].getPersons() && city == rooms[i].getCityName() && hotel == rooms[i].getHotelName()) {
-                mas[i] = rooms[i];
-            }
 
-        }
-        return mas;
+        return null;
     }
 
     @Override
     public Room[] getAll() {
-        return new Room[0];
+        return null;
     }
 }
