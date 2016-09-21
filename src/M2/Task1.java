@@ -22,6 +22,11 @@ public class Task1 {
         System.out.println("Modulus of int "+moddulus(array2));
         System.out.println("Modulus of double "+modulus(array));
 
+        System.out.println("-----------------------------------");
+
+        System.out.println(M6.Task1.ArraysUtils.reverse(array));
+        System.out.println(M6.Task1.ArraysUtils.findEvenElements(array));
+
 
 
 
