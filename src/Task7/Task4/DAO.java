@@ -1,4 +1,4 @@
-package M5.Task6;
+package Task7.Task4;
 
 /**
  * Created by asevruk on 9/13/2016.
