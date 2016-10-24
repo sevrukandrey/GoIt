@@ -5,14 +5,17 @@ import java.util.*;
 /**
  * Created by asevruk on 10/6/2016.
  */
+
+
+//????? ? ??????????? ??? ???? ??? ?? ??????? ???? ?????????? ?? ?????? ????????, ???? ??? ????? ?? ?? ??????? ???????? ? ??.
 public class Main {
     public static void main(String[] args) {
 
-        decreaseSortByOrder(createlist());
+       decreaseSortByOrder(createlist());
         increaseSortByOrderAndCitySort(createlist());
-        sortListByOrderItemNameAndShopIdentificatorAndUserCity(createlist());
+       sortListByOrderItemNameAndShopIdentificatorAndUserCity(createlist());
         deleteDublicate(createlist());
-        deleteItemsWherePriceLess1500(createlist());
+       deleteItemsWherePriceLess1500(createlist());
         separateList(createlist());
 
 
@@ -20,7 +23,7 @@ public class Main {
 
 
     private static void separateList(List list) {
-        List<Order> newlist = new ArrayList<>();
+        List<Order> newList = new ArrayList<>();
         Iterator<Order> iterator = list.iterator();
         while
                 (iterator.hasNext()) {
@@ -28,17 +31,17 @@ public class Main {
             Order order = iterator.next();
 
             if (order.getCurrency().equals(Currency.EUR)) {
-                newlist.add(order);
+                newList.add(order);
                 iterator.remove();
 
             }
 
         }
-        System.out.println(list.size());
+        System.out.println("Separete list on two");
+        System.out.println("USD list");
         System.out.println(list);
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.println(newlist.size());
-        System.out.println(newlist);
+        System.out.println("EUR list");
+        System.out.println(newList);
 
 
     }
@@ -58,23 +61,22 @@ public class Main {
         }
 
 
+        System.out.println("Delete items where  Price less than 1500");
         System.out.println(list);
+        System.out.println("-----------------------------------------------------------------");
     }
 
 
     private static void deleteDublicate(List createlist) {
-        System.out.println(createlist.size());
-
         Set<Order> set = new HashSet<>();
-
-
         Iterator<Order> iterator = createlist.iterator();
 
         while (iterator.hasNext()) {
             set.add(iterator.next());
         }
-        System.out.println(set.size());
+        System.out.println("Delete dublicates");
         System.out.println(set);
+        System.out.println("-----------------------------------------------------------------");
     }
 
     private static void sortListByOrderItemNameAndShopIdentificatorAndUserCity(List list) {
@@ -90,8 +92,12 @@ public class Main {
                 return o1.getItemName().compareTo(o2.getItemName());
             }
         };
+
         list.sort(comp);
+
+        System.out.println("Sort list by order and name and id");
         System.out.println(list);
+        System.out.println("-----------------------------------------------------------------");
     }
 
     private static void increaseSortByOrderAndCitySort(List list) {
@@ -107,7 +113,9 @@ public class Main {
             }
         };
         list.sort(comp);
+        System.out.println("Sort by order and city");
         System.out.println(list);
+        System.out.println("-----------------------------------------------------------------");
 
     }
 
@@ -123,7 +131,9 @@ public class Main {
         };
 
         list.sort(comp);
+        System.out.println("decrease Sort By Order");
         System.out.println(list);
+        System.out.println("-----------------------------------------------------------------");
     }
 
 
@@ -131,27 +141,15 @@ public class Main {
 
         List<Order> list = new ArrayList<Order>();
 
-        Order o1 = new Order(0, 0, Currency.EUR, "a", "a", new User(1, "andrey", "sevruk", "b", 200));
-        Order o2 = new Order(0, 0, Currency.EUR, "a", "a", new User(1, "andrey", "sevruk", "b", 200));
-        Order o3 = new Order(0, 0, Currency.EUR, "a", "a", new User(1, "andrey", "sevruk", "b", 200));
-        Order o4 = new Order(4, 400, Currency.EUR, "d", "b", new User(4, "andrey", "sevruk", "kiev", 200));
-        Order o5 = new Order(5, 500, Currency.EUR, "f", "b", new User(5, "andrey", "sevruk", "kiev", 200));
-        Order o6 = new Order(6, 600, Currency.EUR, "g", "b", new User(1, "andrey", "sevruk", "kiev", 200));
-        Order o7 = new Order(7, 700, Currency.EUR, "c", "b", new User(2, "andrey", "sevruk", "kiev", 200));
-        Order o8 = new Order(8, 800, Currency.USD, "a", "b", new User(3, "andrey", "sevruk", "kiev", 200));
-        Order o9 = new Order(9, 900, Currency.EUR, "aa12aa", "b", new User(4, "andrey", "sevruk", "kiev", 200));
-        Order o10 = new Order(10, 1500, Currency.USD, "aaaaa12a", "b", new User(5, "andrey", "sevruk", "kiev", 200));
+        list.add(new Order(110, 0, Currency.EUR, "a", "a", new User(1, "andrey", "sevruk", "b", 200)));
+        list.add(new Order(120, 0, Currency.EUR, "a", "a", new User(1, "andrey", "sevruk", "b", 200)));
+        list.add( new Order(140, 0, Currency.EUR, "a", "a", new User(1, "andrey", "sevruk", "b", 200)));
+        list.add(new Order(5, 500, Currency.EUR, "f", "b", new User(5, "andrey", "sevruk", "kiev", 200)));
+        list.add(new Order(7, 700, Currency.EUR, "c", "b", new User(2, "andrey", "sevruk", "kiev", 200)));
+        list.add(new Order(8, 800, Currency.USD, "a", "b", new User(3, "andrey", "sevruk", "kiev", 200)));
+        list.add(new Order(9, 900, Currency.EUR, "aa12aa", "b", new User(4, "andrey", "sevruk", "kiev", 200)));
+        list.add(new Order(10, 1500, Currency.USD, "aaaaa12a", "b", new User(5, "andrey", "sevruk", "kiev", 200)));
 
-        list.add(o1);
-        list.add(o2);
-        list.add(o3);
-        list.add(o4);
-        list.add(o5);
-        list.add(o6);
-        list.add(o7);
-        list.add(o8);
-        list.add(o9);
-        list.add(o10);
         return list;
 
     }
