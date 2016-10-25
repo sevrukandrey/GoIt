@@ -4,7 +4,9 @@ package Task9;
 import Task7.Task2.Currency;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -21,14 +23,39 @@ public class Main {
         //deleteByPrice(createlist());
        // separetaListOnTwoList(createlist());
         
-        separetaListOnMany(createlist());
-
-
+        //separetaListOnMany(createlist());
+        //System.out.println(isSetContainsName(createset()));
+        System.out.println(deleteOrdersFromSet(createset())); ;
 
 
     }
 
+    private static Set<Order> deleteOrdersFromSet(Set<Order> createset) {
+        createset = createset.stream().filter((p)-> p.getCurrency().equals(Currency.EUR)).collect(Collectors.toSet());
+        return createset;
+    }
+
+    private static boolean isSetContainsName(Set<Order> createset) {
+        System.out.println(createset);
+
+        return createset.stream().anyMatch(p->p.getUser().getFirstName().contains("1"));
+
+    }
+
+
+    private static Set createset() {
+        Set<Order> set = new HashSet<>();
+        set.add(new Order(0, 0, Currency.USD, "b", "a", new User(1, "1", "1", "b", 200)));
+        set.add(new Order(0, 0, Currency.USD, "a", "a", new User(1, "1", "1", "b", 200)));
+        set.add(new Order(0, 0, Currency.USD, "c", "a", new User(1, "1", "1", "b", 200)));
+        set.add(new Order(0, 0, Currency.USD, "d", "a", new User(1, "1", "1", "b", 200)));
+       // set.add(new Order(2, 0, Currency.USD, "c", "a", new User(1, "andrey", "Petrov", "b", 200)));
+       // set.add(new Order(3, 0, Currency.USD, "c", "a", new User(1, "andrey", "Petrov", "b", 200)));
+        return  set;
+    }
+
     private static void separetaListOnMany(List<Order> createlist) {
+
     }
 
     private static void separetaListOnTwoList(List<Order> createlist) {
