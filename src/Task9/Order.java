@@ -1,10 +1,6 @@
 package Task9;
 
-import Task7.Task2.Currency;
 
-/**
- * Created by asevruk on 10/6/2016.
- */
 public class Order implements Comparable<Order> {
     public int getId() {
         return id;

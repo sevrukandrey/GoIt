@@ -1,7 +1,7 @@
 package Task9;
 
 
-import Task7.Task2.Currency;
+
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,9 +9,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * Created by asevruk on 10/10/2016.
- */
+
 public class Main {
     public static void main(String[] args) {
 
@@ -45,7 +43,10 @@ public class Main {
 
     private static Set createset() {
         Set<Order> set = new HashSet<>();
-        set.add(new Order(0, 0, Currency.USD, "b", "a", new User(1, "1", "1", "b", 200)));
+        set.add(new Order(0, 0,Currency.USD , "b", "a", new User(1, "1", "1", "b", 200)));
+
+
+
         set.add(new Order(0, 0, Currency.USD, "a", "a", new User(1, "1", "1", "b", 200)));
         set.add(new Order(0, 0, Currency.USD, "c", "a", new User(1, "1", "1", "b", 200)));
         set.add(new Order(0, 0, Currency.USD, "d", "a", new User(1, "1", "1", "b", 200)));
@@ -119,8 +120,8 @@ public class Main {
         List<Order> list = new ArrayList<>();
         list.add(new Order(0, 0, Currency.USD, "c", "a", new User(1, "andrey", "Petrov", "b", 200)));
 
-        list.add(new Order(0, 1501, Currency.USD, "c", "a", new User(1, "andrey", "Petrov", "b", 200)));
-        list.add(new Order(0, 0, Currency.USD, "c", "a", new User(1, "andrey", "Petrov", "b", 200)));
+        list.add(new Order(1, 1501, Currency.USD, "c", "a", new User(1, "andrey", "Petrov", "b", 200)));
+        list.add(new Order(2, 0, Currency.USD, "c", "a", new User(1, "andrey", "Petrov", "b", 200)));
         list.add(new Order(1, 0, Currency.EUR, "a", "a", new User(1, "andrey", "sevruk", "a", 200)));
         /*list.add(new Order(2, 2, Currency.EUR, "aaa", "a", new User(1, "andrey", "sevruk", "b", 200)));
         list.add(new Order(3, 3, Currency.USD, "aaaa", "a", new User(1, "andrey", "sevruk", "b", 200)));
