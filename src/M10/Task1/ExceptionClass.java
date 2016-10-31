@@ -3,7 +3,7 @@ package M10.Task1;
 /**
  * Created by asevruk on 10/27/2016.
  */
-public class ExceptionClass {
+public class ExceptionClass extends Throwable {
     public static void main(String[] args) throws java.lang.Exception {
 
 
