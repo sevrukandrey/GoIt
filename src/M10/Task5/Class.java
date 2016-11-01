@@ -11,5 +11,16 @@ public class Class {
 
 
 
+
+    }
+
+    public static void main(String[] args) throws Exception3, Exception2, Exception1 {
+        try{
+            testMethod();
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+
     }
 }
