@@ -3,49 +3,60 @@ package M11.Task1;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 /**
  * Created by asevruk on 11/8/2016.
  */
 public class Main {
-    public static void main(String[] args) throws IOException {
+
+    static Map<String, String> createMap() {
         HashMap<String, String> map = new HashMap<>();
         map.put("You", "YOU");
         map.put("map", "MAP");
         map.put("with", "AAAAAAAAAAAA");
+        return map;
+    }
 
+    static String replacer(Map<String, String> map, String line) {
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            line = line.replaceAll(key, value);
 
+        }
+        return line;
+    }
+
+    static String readLineForFile() throws IOException {
         BufferedReader br;
-        try {
-            br = new BufferedReader(new FileReader("D:\\text.txt"));
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-            return;
-        }
-        try {
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
+        String everything;
 
-            while (line != null) {
+        br = new BufferedReader(new FileReader("D:\\text.txt"));
 
 
-                sb.append(line);
-                sb.append(System.lineSeparator());
-                line = br.readLine();
-            }
-            String everything = sb.toString();
-            for (Map.Entry<String, String> entry : map.entrySet()) {
-                String key = entry.getKey();
-                String value = entry.getValue();
-                everything = everything.replaceAll(key, value);
-            }
-            System.out.println(everything);
+        StringBuilder sb = new StringBuilder();
+        String line = br.readLine();
 
-        } finally {
-            br.close();
+        while (line != null) {
+
+
+            sb.append(line);
+            sb.append(System.lineSeparator());
+            line = br.readLine();
         }
 
+        everything = sb.toString();
+        br.close();
+
+        return everything;
+
+
+    }
+
+
+    public static void main(String[] args) throws IOException {
+
+        System.out.println(replacer(createMap(), readLineForFile()));
 
     }
 }
